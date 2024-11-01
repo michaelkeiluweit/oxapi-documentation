@@ -374,3 +374,7 @@ needs to be logged in to use the mutation.
             "refreshToken": "your-refresh-token"
         }
     }
+
+.. important::
+   If the password will be reset or changed, your old **accessToken will expire** and is not usable anymore. Only the new
+   accessToken can be used now.
