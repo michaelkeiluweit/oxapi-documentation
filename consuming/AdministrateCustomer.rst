@@ -351,3 +351,26 @@ to the email content, allowing customers to manually use the hash key if needed.
 
 For more details on editing CMS pages, refer to `Editing CMS pages
 <https://docs.oxid-esales.com/eshop/en/latest/configuration/customer-information.html#editing-customer-information-pages>`_.
+
+3. ``customerPasswordChange``: This mutation allows the user to change the password. The difference is, that the user
+needs to be logged in to use the mutation.
+
+.. code-block:: graphql
+   :caption: call to customerPasswordChange mutation
+
+    mutation {
+        customerPasswordChange(
+            old: "132oldPassword"
+            new: "newPassword123"
+        )
+    }
+
+.. code-block:: json
+   :caption: customerPasswordChange mutation response
+
+    {
+        "data": {
+            "accessToken": "a-very-long-jwt-encoded-token"
+            "refreshToken": "your-refresh-token"
+        }
+    }
