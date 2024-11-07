@@ -146,9 +146,8 @@ Use this query to get the list of all themes. You can use filter like ``title`` 
 .. code-block:: graphql
    :caption: call to ``themes`` query
 
-    query themeListFilter {
-        themes(
-            filters: {
+    query { themesList (
+        filters: {
             title: {
                 contains: "Theme"
             }
@@ -170,7 +169,7 @@ Use this query to get the list of all themes. You can use filter like ``title`` 
 
     {
         "data": {
-            "themes": [
+            "themesList": [
                 {
                     "id": "apex",
                     "title": "APEX Theme",
