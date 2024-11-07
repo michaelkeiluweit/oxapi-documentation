@@ -146,15 +146,16 @@ Use this query to get the list of all themes. You can use filter like ``title`` 
 .. code-block:: graphql
    :caption: call to ``themes`` query
 
-    query { themesList (
-        filters: {
-            title: {
-                contains: "Theme"
+    query themeListFilter {
+        themesList (
+            filters: {
+                title: {
+                    contains: "Theme"
+                }
+                active: {
+                    equals: true
+                }
             }
-            active: {
-                equals: true
-            }
-        }
         ) {
             id
             title
